@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {FiPower, FiTrash2} from 'react-icons/fi';
 
-import api from ('../../services/api');
+import api from '../../services/api';
 
 import './styles.css';
 
@@ -13,13 +13,13 @@ export default function Profile(){
 
     const history = useHistory();
 
-    const ondId = localStorage.getItem('ongId');
+    const ongId = localStorage.getItem('ongId');
     const ongName = localStorage.getItem('ongName');
 
     useEffect(() => {
-        api.ger('profile', {
+        api.get('profile', {
             headers: {
-                Authorization: ondId,
+                Authorization: ongId,
             }
         }).then(response => {
             setIncidents(response.data);
@@ -62,17 +62,17 @@ export default function Profile(){
 
             <ul>
                 {incidents.map(incidents => (
-                    <li key={incident.id}>
+                    <li key={incidents.id}>
                         <strong>CASO:</strong>
-                        <p>{incident.title}</p>
+                        <p>{incidents.title}</p>
 
                         <strong>DESCRIÇÃO:</strong>
-                        <p>{incident.description}</p>
+                        <p>{incidents.description}</p>
 
                         <strong>VALOR:</strong>
-                        <p>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(incident.value)}</p>
+                        <p>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(incidents.value)}</p>
 
-                        <button onClick={() => handleDeleteIncident(incident.id)} type="button">
+                        <button onClick={() => handleDeleteIncident(incidents.id)} type="button">
                             <FiTrash2 size={20} color="#a8a8b3"/>                        
                         </button>
                     </li>
