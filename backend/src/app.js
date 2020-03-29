@@ -1,5 +1,6 @@
 const express = require('express'); //importando funcionalidades do express
 const routes = require('./routes');
+const {errors} = require('celebrate');
 const cors = require('cors');
 
 const app = express(); //variavel que armazena a aplicação(app) >> [mais tarde essa app vai possuir as rotas]
@@ -7,8 +8,12 @@ const app = express(); //variavel que armazena a aplicação(app) >> [mais tarde
 app.use(cors());
 app.use(express.json());
 app.use(routes);
+app.use(errors());
 
-app.listen(3333); //redireciona o app para a porta que eu quero
+module.exports = app;
+
+/*porem foi substituido pelo código acima e o de baixo foi passado para pasta server..^^
+app.listen(3333); <<redireciona o app para a porta que eu quero*/
 
 /*  Rota / Recurso
 Métodos HTTP:
