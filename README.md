@@ -111,6 +111,6 @@ _Antes de executar é necessario iniciar o backend deste projeto. No diretório 
 
 ###### Por me auxiliar nos bugs que em grande maioria era palavras cmidas! >[Elias Gabriel](https://github.com/EliasGcf)
 
+
 ```
 Feito com 💜 by [Soonas](https://www.linkedin.com/in/soonas/)
-```
