@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">
   <img src=".github/logo.svg" alt="Be The Hero">
 </h1>
@@ -112,3 +113,4 @@ _Antes de executar é necessario iniciar o backend deste projeto. No diretório 
 
 ```
 Feito com 💜 by [Soonas](https://www.linkedin.com/in/soonas/)
+```
