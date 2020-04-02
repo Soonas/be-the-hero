@@ -1,4 +1,6 @@
-<h3 align="center">Fundamentos de Bootstrap 4</h3> 
+<h1 align="center">
+  <img src=".github/logo.svg" alt="Be The Hero">
+</h1>
 
 <p align="center">
   <a href="#%EF%B8%8F-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
